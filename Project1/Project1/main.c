@@ -6,7 +6,7 @@
 
 int main(void) {
 	// INIT ======================================
-	//HT_RBnode_ptr head = HT_MakeRBT();
+	HT_RBnode_ptr head = HT_MakeRBT();
 	graph_ptr gp;
 	HT_MakeSentinel();
 	MakeSentinel();
@@ -16,8 +16,88 @@ int main(void) {
 
 	int fromV = 10;
 	int toV = 17;
-	//printf(" [%d] - [%d] \n", fromV, toV);
-	//Dijkstra(gp, fromV, toV);
+	printf(" [%d] - [%d] \n", fromV, toV);
+	node_ptr temp = Dijkstra(gp, fromV, toV);
+	node_ptr test = temp;
+	printf("\n\n");
+	printf("Weight : ");
+	while (test != NULL) {
+
+		printf("%d ---", test->Weight);
+		test = test->next;
+	}
+
+
+
+	
+	hotel_site_ptr match = HS_MATCH(temp, gp, 5000, 10);
+	hotel_site_ptr hsptr = match;
+	printf("\n\n");
+	printf("budget = 5000, period = 10");
+
+	printf("\n\n");
+	printf("City num : \t");
+	while (hsptr != NULL) {
+		
+		printf("%d ---", hsptr->CityNum);
+		hsptr = hsptr->next;
+	}
+
+	printf("\n\n");
+	printf("Preference : \t");
+	hsptr = match;
+	while (hsptr != NULL) {
+
+		printf("%d ---", hsptr->Preference);
+		hsptr = hsptr->next;
+	}
+	
+	printf("\n\n");
+	printf("Hotel : \t");
+	hsptr = match;
+	while (hsptr != NULL) {
+		
+		printf("%d ---", hsptr->Hotel);
+		hsptr = hsptr->next;
+	}
+
+	printf("\n\n");
+	printf("Satisfact : \t");
+	hsptr = match;
+	while (hsptr != NULL) {
+		
+		printf("%d ---", hsptr->Satisfaction);
+		hsptr = hsptr->next;
+	}
+
+	printf("\n\n");
+	printf("Price : \t");
+	hsptr = match;
+	while (hsptr != NULL) {
+		
+		printf("%d ---", hsptr->Price);
+		hsptr = hsptr->next;
+	}
+
+	printf("\n\n");
+	printf("Day : \t");
+	hsptr = match;
+	while (hsptr != NULL) {
+		
+		printf("%d ---", hsptr->Day);
+		hsptr = hsptr->next;
+	}
+
+	printf("\n\n");
+	printf("Budget : \t");
+	hsptr = match;
+	while (hsptr != NULL) {
+
+		printf("%d ---", hsptr->Budget);
+		hsptr = hsptr->next;
+	}
+
+
 	//ShowGraph(gp);
 	//puts("===================== ");
 	// ShowHotelInfo(gp, 2);
@@ -33,7 +113,7 @@ int main(void) {
 	RSV_RB_INSERT(&ReserveHead, id);
 
 	//InorderTest(ReserveHead);
-	//system("pause");
+	system("pause");
 	//=====================================
 	
 	int nKey, MoveBar;

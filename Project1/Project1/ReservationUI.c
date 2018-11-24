@@ -20,7 +20,7 @@ void ReservationUI() {
 	// TODO: 
 	//node_ptr temp = Dijkstra(StartPos, DestPos);
 	// TODO:  HS_MATCH
-
+	//hotel_site_ptr match = HS_MATCH(temp, gp, budget, Period);
 	/*
 	temp2 = HS_MATCH();
 	
