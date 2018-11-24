@@ -14,7 +14,7 @@ hotel_site_ptr HS_MATCH(hotel_site_ptr head, node_ptr node, graph_ptr gp, int bu
 		if (ptr->Budget < 0) return NULL; //budget 0보다 작으면 NULL;
 	}
 
-
+	//ffffff
 }//경로에 최저가 호텔 놓는다.->만족도로 날짜 더해
 
 hotel_site_ptr HS_SATISFACTION(node_ptr node, graph_ptr gp) { //도시 이름과 평점을 받으면, 만족도를 계산해서 제일 좋은 호텔 정보를 담은 노드를 리턴
